@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>정사각형 객체</title>
+	<style>
+		body {
+			text-align: center;
+			font-size: 1.2em;
+			line-height: 2em;
+		}
+	</style>
+</head>
+
+<body>
+	<script>
+		var side = prompt("정사각형의 한면의 길이는? (cm)");
+		var square = new Square(side);
+
+		document.write("한면의 길이가 " + side + "cm일 때<br>");
+		document.write("사각형의 둘레 : 약" + square.Perimeter() + "cm<br>");
+		document.write("사각형의 넓이 : 약" + square.area() + "cm<sup>2</sup>");
+
+		function Square(side) {
+			this.siede = side,
+				this.Perimeter = function () {
+					return side * 4
+				}
+			this.area = function () {
+				return side * side
+			}
+		}
+	</script>
+</body>
+
+</html>

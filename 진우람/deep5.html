@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>5장 심화문제</title>
+</head>
+
+<body>
+	<script>
+
+		var a = prompt("첫 번째 숫자를 입력해주세요");
+		var b = prompt("더하기(+),빼기(-),곱하기(*),나누기(/) 중 선택해주세요");
+		var c = prompt("두 번째 숫자를 입력해주세요");
+
+		if (b == "+") {
+			alert((a + " + " + c + "=") + (parseInt(a) + parseInt(c)));
+		} else if (b == "-") {
+			alert((a + " - " + c + "=") + (a - c));
+		} else if (b == "*") {
+			alert(a + " * " + c + "=" + a * c);
+		} else if (b == "/") {
+			alert(a + " / " + c + "=" + a / c);
+		} else {
+			alert("함수를 잘못 입력하였습니다.")
+		}
+
+	</script>
+</body>
+
+</html>
