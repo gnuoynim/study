@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+</head>
+<body>
+    <div>
+        <label>태어난 년도(4자리)</label>
+        <div>
+            <input type="text" maxlength="4" onkeyup="this.value.replace(/[^0-9]/g,''); inputAge(this);" name="brth">
+        </div>
+        <label>나이</label>
+        <div>
+            <input type="text" maxlength="2" onkeyup="this.value=this.value.replace(/[^0-9]/g,''); inputBirth" name="age">
+        </div>
+    </div>
+</body>
+<script>
+    function inputAge(birth){
+        var num = birth.value.toString();
+        var numDigit = num.length;
+        
+        if(numDigit ==4){
+            var date = new Date();
+            var year = date.getFullYear();
+            if(birth.value*1 > year){
+                alert("현재는 2021년입니다.");
+            }else{
+                $(':input[name=age]').val(year-birth.value*1);
+            }
+        }
+    }
+    function inputBirth(age){
+        var num = age.value.toString();
+        var numDigit = num.length;
+        if(numDigit <=3){
+            var date = new Date();
+            var year = date.getFullYear();
+            $(':input[name=brth]').val(year - age.value*1);
+        }
+    }
+</script>
+</html>
