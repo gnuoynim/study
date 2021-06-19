@@ -22,7 +22,7 @@ document.addEventListener('click', (e) => {
 });
 
 
-///테스트 커밋
+///테스트 커밋 222
 
 async function getTargetDocument(url) {
     // HTML URL 데이터 획득을 위한 XMLHttpRequest...
