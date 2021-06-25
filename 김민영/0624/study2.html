@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+        //호이스팅 현상
+    
+//    var lang = 'html'; //전역변수
+//    function study(code){
+//      
+//        if(code){
+//            
+//            var lang = '언어';
+//            
+//            return lang;
+//        }
+//        return lang;
+//    }
+//    document.write(study(false));
+    
+//    호이스팅 현상
+    
+    let lang = 'html'; //전역변수
+    function study(code){
+      
+        if(code){
+            
+            let lang = '언어';
+            
+            return lang;
+        }
+        return lang;
+    }
+    document.write(study(true));
+    
+    
+</script>
+</html>

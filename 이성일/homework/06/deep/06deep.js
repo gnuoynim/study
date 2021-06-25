@@ -28,7 +28,7 @@ async function getTargetDocument(url) {
     // HTML URL 데이터 획득을 위한 XMLHttpRequest...
     let target = new XMLHttpRequest();
     target.onreadystatechange = function() {
-        if(target.readyState === 4 && target.status === 200) {
+        if(target.readyState === 4 && target.status === 200){
             const parser = new DOMParser(); // 문자열을 html 형식으로 변환 해주는 객체
             const doc = parser.parseFromString(target.responseText, "text/html");
             documentTagParser(doc);
@@ -44,7 +44,7 @@ function documentTagParser(document){
     const documentList = document.all;
     let documnetTag = [];
     let documentTagCount = {};
-
+    
     for (let i in document.all){
         if(documentList[i].nodeName !== undefined){
             const tagName = (documentList[i].nodeName).toLowerCase();
@@ -55,7 +55,6 @@ function documentTagParser(document){
                 documentTagCount[tagName] = 1;
             }
             documnetTag.push(tagName);
-
         }
     }
     console.log(documentTagCount);

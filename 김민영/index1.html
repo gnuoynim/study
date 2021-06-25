@@ -9,15 +9,23 @@
     <div>
         <label>태어난 년도(4자리)</label>
         <div>
-            <input type="text" maxlength="4" onkeyup="this.value.replace(/[^0-9]/g,''); inputAge(this);" name="brth">
+            <input type="text" id="test1" maxlength="4" onkeyup="this.value.replace(/[^0-9]/g,''); inputAge(this);" name="brth">
         </div>
         <label>나이</label>
         <div>
-            <input type="text" maxlength="2" onkeyup="this.value=this.value.replace(/[^0-9]/g,''); inputBirth" name="age">
+            <input type="text" id="test2" maxlength="2" onkeyup="this.value=this.value.replace(/[^0-9]/g,''); inputBirth" name="age">
         </div>
     </div>
 </body>
 <script>
+    
+    const test1DOM = document.querySelector('#test1');
+    const test2DOM = document.querySelector('#test2');
+    
+    console.log(test1DOM)
+    console.log(test2DOM)
+
+
     function inputAge(birth){
         var num = birth.value.toString();
         var numDigit = num.length;
